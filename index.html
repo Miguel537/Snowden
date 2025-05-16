@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guia de Segurança - Snowden</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Modal de aviso -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <p>Este site coleta dados pessoais. Ao prosseguir, você concorda com nossa política de privacidade.</p>
+      <button onclick="fecharModal()">Concordo</button>
+    </div>
+  </div>
+
+  <main>
+    <h1>Guia de Segurança para Dados Sensíveis</h1>
+
+    <section class="formulario">
+      <h2>Formulário Simulado</h2>
+      <form>
+        <!-- O campo CPF exige mais cuidado porque é um dado pessoal sensível -->
+        <input type="text" name="cpf" placeholder="CPF" required />
+
+        <!-- O campo Email também é sensível, pode ser usado para phishing -->
+        <input type="email" name="email" placeholder="E-mail" required />
+
+        <!-- A senha não deve ser visível nem armazenada no localStorage -->
+        <input type="password" name="senha" placeholder="Senha" required />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section class="checklist">
+      <h2>Checklist de Boas Práticas</h2>
+      <ul>
+        <li>✅ Informar o usuário sobre o uso de dados.</li>
+        <li>✅ Utilizar HTTPS sempre no envio de dados.</li>
+        <li>✅ Evitar armazenar senhas em campos visíveis.</li>
+        <li>✅ Nunca salvar dados sensíveis no LocalStorage.</li>
+        <li>✅ Validar e limpar os dados no front e back-end.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
